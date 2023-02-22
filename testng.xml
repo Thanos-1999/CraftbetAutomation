@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="CRAFTBET Test"  parallel="tests">
+    <test name="Casino">
+        <classes>
+            <class name="Main_Test.Casino">
+                <methods>
+                    <include name="Casino_Favorite_Games"/>
+                    <include name="CasinoSearch"/>
+                    <!--                    <include name="AMATIC"/>-->
+                    <!--                    <include name="Betsoft"/>-->
+                    <!--                    <include name="BoomingGames"/>-->
+                    <!--                    <include name="Boongo"/>-->
+                    <!--                    <include name="Edict"/>-->
+                    <!--                    <include name="EGT"/>-->
+                    <!--                    <include name="Evolution"/>-->
+                    <!--                    <include name="Evoplay"/>-->
+                    <!--                    <include name="Fugaso"/>-->
+                    <!--                    <include name="GameArt"/>-->
+                    <!--                    <include name="Genii"/>-->
+                    <!--                    <include name="GMW"/>-->
+                    <!--                    <include name="Greentube"/>-->
+                    <!--                    <include name="Habanero"/>-->
+                    <!--                    <include name="Igrosoft"/>-->
+                    <!--                    <include name="IGT"/>-->
+                    <!--                    <include name="InBet"/>-->
+                    <!--                    <include name="ISoftBet"/>-->
+                    <!--                    <include name="Leander"/>-->
+                    <!--                    <include name="Mascot"/>-->
+                    <!--                    <include name="Microgaming"/>-->
+                    <!--                    <include name="MrSlotty"/>-->
+                    <!--                    <include name="NetEnt"/>-->
+                    <!--                    <include name="NoLimitCity"/>-->
+                    <!--                    <include name="Novomatic"/>-->
+                    <!--                    <include name="NYX"/>-->
+                    <!--                    <include name="PariPlay"/>-->
+                    <!--                    <include name="PlaynGo"/>-->
+                    <!--                    <include name="PlaysonDirect"/>-->
+                    <!--                    <include name="PragmaticPlay"/>-->
+                    <!--                    <include name="PushGaming"/>-->
+                    <!--                    <include name="RedTiger"/>-->
+                    <!--                    <include name="SoftGaming"/>-->
+                    <!--                    <include name="Spadegaming"/>-->
+                    <!--                    <include name="Thunderkick"/>-->
+                    <!--                    <include name="TomHorn"/>-->
+                    <!--                    <include name="TwoWinPower"/>-->
+                    <!--                    <include name="WACS"/>-->
+                    <!--                    <include name="Wazdan"/>-->
+                    <!--                    <include name="WorldMatch"/>-->
+                    <!--                    <include name="Yggdrasil"/>-->
+                    <!--                    <include name="ZeusPlay"/>-->
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Deposit_Withdraw">
+        <classes>
+            <class name="Main_Test.Payments"/>
+        </classes>
+    </test>
+
+    <test name="Footer">
+        <classes>
+            <class name="Main_Test.Footer"/>
+        </classes>
+    </test>
+    <test name="Live Casino">
+        <classes>
+            <class name="Main_Test.LiveCasino"/>
+        </classes>
+    </test>
+    <test name="Login">
+        <classes>
+            <class name="Main_Test.Login"/>
+        </classes>
+    </test>
+    <test name="Registration">
+        <classes>
+            <class name="Main_Test.Registration"/>
+        </classes>
+    </test>
+    <test name="Sport">
+        <classes>
+            <class name="Main_Test.Sport"/>
+        </classes>
+    </test>
+    <test name="Virtual_Sport">
+        <classes>
+            <class name="Main_Test.VirtualSport"/>
+        </classes>
+    </test>
+    <test name="KENO">
+        <classes>
+            <class name="Main_Test.VirtualGames.Keno"/>
+        </classes>
+    </test>
+
+    <test name="Minesweeper">
+        <classes>
+            <class name="Main_Test.VirtualGames.Minesweeper"/>
+        </classes>
+    </test>
+
+    <test name="High_Low">
+        <classes>
+            <class name="Main_Test.VirtualGames.High_Low"/>
+        </classes>
+    </test>
+
+    <test name="Crash">
+        <classes>
+            <class name="Main_Test.VirtualGames.Crash"/>
+        </classes>
+    </test>
+
+    <test name="Spin_Win">
+        <classes>
+            <class name="Main_Test.VirtualGames.Spin_Win"/>
+        </classes>
+    </test>
+
+</suite>
