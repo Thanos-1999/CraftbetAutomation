@@ -1,7 +1,10 @@
 package Main_Test;
+
 import PageObjects.Footer_Page;
+import elemental2.dom.Screen;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.awt.*;
 import java.io.IOException;
 
@@ -203,7 +206,6 @@ public class Footer extends BaseClass {
         String URL = driver.getCurrentUrl();
         Assert.assertEquals(URL, CHAMPIONS_LEAGUE_URL);
     }
-
 
 
     @Test(description = "CASINO & LIVE CASINO")

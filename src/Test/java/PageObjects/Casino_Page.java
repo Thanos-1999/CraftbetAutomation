@@ -86,7 +86,7 @@ public class Casino_Page extends BasePage {
         basePage.actionMoveToElement(hovered_game);
         basePage.waitAction(5000);
         basePage.javaScriptClick(Real_button);
-
+        basePage.waitAction(10000);
     }
 }
 

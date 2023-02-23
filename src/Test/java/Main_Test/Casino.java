@@ -4,12 +4,10 @@ import Main_Test.Rerun_Failed_Test.Retry;
 import PageObjects.Casino_Logic;
 import PageObjects.Casino_Page;
 import PageObjects.Login_Pages;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
+import org.sikuli.script.FindFailed;
+import org.sikuli.script.Screen;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -41,7 +39,7 @@ public class Casino extends BaseClass {
 
 
     @Test(enabled = false)
-    public void Getting_filenames_of_CasinoGames() {
+    public void Getting_filenames_of_Casino_Games() {
 
         test = extent.createTest("Getting the filenames of all files in Casino folder");
         File folder = new File("C:\\Users\\Hayk Hambardzumyan\\Desktop\\CRAFTBET_CASINO\\Game.Amatic");
@@ -55,10 +53,6 @@ public class Casino extends BaseClass {
             }
         }
     }
-
-
-
-
 
     @Test(description = "Top Games", retryAnalyzer = Retry.class)
     public void Casino_Favorite_Games() throws InterruptedException, IOException, AWTException {
@@ -118,29 +112,46 @@ public class Casino extends BaseClass {
     }
 
 
-
-
-    @Test(description = " Specific Game Bet", retryAnalyzer = Retry.class, enabled = true)
-    public void Specific_Game_Bet() throws IOException, InterruptedException, AWTException  {
-        test = extent.createTest("Specific Game Bet").assignDevice("Windows");
+    @Test(description = " Specific Casino Game Bet", retryAnalyzer = Retry.class, enabled = true)
+    public void Specific_Game_Bet() throws IOException, InterruptedException, AWTException, FindFailed {
+        test = extent.createTest("Specific Casino Game Bet").assignDevice("Windows");
         Casino_Page casino_craftBet = new Casino_Page();
-        casino_craftBet.Search_Work("9 Skulls of Gold");
+        casino_craftBet.Search_Work("Dragon Egg");
+        test.info("Open Casino and Search mentioned game: Dragon Egg");
         casino_craftBet.Hover_Casino_Game_click_Play();
-        Thread.sleep(4000);
+        test.info("Open Game");
 
         try {
+            Actions action = new Actions(driver);
+            action.sendKeys(Keys.ENTER).build().perform();
+            Thread.sleep(4000);
+           } catch (Exception e) {
+        }
+
+        Screen s = new Screen();
+        try {
             for (int z = 0; z < 1000; z++) {
-                Actions action = new Actions(driver);
-                action.sendKeys(Keys.SPACE).build().perform();
+                s.find("pause.png"); //identify pause button
+                s.click("pause.png"); //click pause button
                 Thread.sleep(60000);
+                test.info("Bet button clicked " + z);
             }
+
         } catch (Exception e) {
             System.out.println("Unable to click Bet button");
         }
+
+
+//        try {
+//            for (int z = 0; z < 1000; z++) {
+//                action.sendKeys(Keys.SPACE).build().perform();
+//                Thread.sleep(60000);
+//                test.info("Bet button clicked "+ z);
+//            }
+//        } catch (Exception e) {
+//            System.out.println("Unable to click Bet button");
+//        }
     }
-
-
-
 
     @Test(description = "Betsoft", retryAnalyzer = Retry.class)
     public void Betsoft() throws IOException, InterruptedException, AWTException {
