@@ -10,24 +10,24 @@ import org.aeonbits.owner.Config.LoadType;
         "system:properties",
         "classpath:general.properties",
         "classpath:grid.properties"})
+public interface Configuration extends Config {
 
-   public interface Configuration extends Config {
+ @Key("target")
+ String target();
 
-    @Key("target")
-    String target();
+ @Key("browser")
+ String browser();
 
-    @Key("browser")
-    String browser();
+ @Key("headless")
+ Boolean headless();
 
-    @Key("headless")
-    Boolean headless();
+ @Key("url.base")
+ String url();
 
-    @Key("url.base")
-    String url();
+ @Key("grid.url")
+ String gridUrl();
 
-    @Key("grid.url")
-    String gridUrl();
+ @Key("grid.port")
+ String gridPort();
 
-    @Key("grid.port")
-    String gridPort();
 }

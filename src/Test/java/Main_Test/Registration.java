@@ -1,5 +1,6 @@
 package Main_Test;
 
+import Main_Test.Rerun_Failed_Test.Retry;
 import PageObjects.Registration_Page;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,14 +8,13 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class Registration extends BaseClass {
-
     String random_First_name = faker.name().firstName();
     String random_Gmail = faker.name().firstName() + faker.name().lastName() + "@Gmail.com";
     String random_Username = faker.name().username();
     String random_Last_name = faker.name().lastName();
     String random_Mobile_Number = String.valueOf(Integer.parseInt(faker.number().digits(9)));
 
-    @Test(description = "Registration page")
+    @Test(description = "Registration page", retryAnalyzer = Retry.class)
     public void Craftbet_Registration() throws InterruptedException, IOException {
         test = extent.createTest("Registration").assignCategory("Functional Test").assignDevice("Windows");
         Registration_Page registration = new Registration_Page();
@@ -56,14 +56,11 @@ public class Registration extends BaseClass {
         registration.Registration_Confirm();
         test.info("Click Register");
         Thread.sleep(2000);
-
         if (driver.getPageSource().contains("User name exists")) {
             Assert.fail();
             test.fail("User name exists");
         }
-
         Thread.sleep(4000);
-
         if (registration.Deposit().equalsIgnoreCase("Deposit")) {
             Assert.assertTrue(true, test.pass("Registration successfully completed").toString());
         } else {

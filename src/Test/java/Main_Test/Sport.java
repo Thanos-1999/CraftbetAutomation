@@ -3,18 +3,13 @@ package Main_Test;
 import Main_Test.Rerun_Failed_Test.Retry;
 import PageObjects.Login_Pages;
 import PageObjects.Sport_Page;
-import cucumber.api.java.sk.A;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.awt.*;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Sport extends BaseClass {
     String SPORT_URL = "https://craftbet.com/sport/prematch#/prematch/home";
@@ -31,7 +26,7 @@ public class Sport extends BaseClass {
             //Open Sport Page
             login.Sport();
         } catch (Exception err) {
-            test.info("Unable to Login");
+            System.out.println("Unable to Login");
             Assert.fail();
         }
     }
@@ -81,6 +76,7 @@ public class Sport extends BaseClass {
     public void Sport_Bet() throws IOException, InterruptedException, AWTException {
         test = extent.createTest("Place Bet in Betslip").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
         Sport_Page sportCraftBet = new Sport_Page();
+
         sportCraftBet.is_Sport_Betslip_Displayed();
         test.info("Verify BetSlip is Displayed");
         sportCraftBet.Sport_PlaceBet();
@@ -110,6 +106,7 @@ public class Sport extends BaseClass {
     public void UpcomingGames() throws InterruptedException, AWTException {
         test = extent.createTest("Upcoming Games").assignCategory("Functional Test").assignDevice("Windows");
         Sport_Page sportCraftBet = new Sport_Page();
+
         if (sportCraftBet.isUpcomingGamesDisplayed()) {
             Assert.assertTrue(true, test.pass("Upcoming Games is Displayed").toString());
         } else {
@@ -119,13 +116,11 @@ public class Sport extends BaseClass {
     }
 
 
-
-
     @Test(description = "Verify Sport is Present")
     public void Verify_Sport_is_Present() throws InterruptedException, AWTException {
         test = extent.createTest("Verify Sport is Present").assignCategory("Functional Test").assignDevice("Windows");
-        Sport_Page sportCraftBet = new Sport_Page();
 
+        Sport_Page sportCraftBet = new Sport_Page();
         String[] expected_Sports = {
                 "Soccer",
                 "Basketball",
@@ -161,6 +156,7 @@ public class Sport extends BaseClass {
                 "Chess"
         };
 
+
         for (String sport : expected_Sports) {
             System.out.println(sport);
 
@@ -178,7 +174,6 @@ public class Sport extends BaseClass {
             if (!sportCraftBet.Sports().toString().contains("Soccer")) {
                 test.fatal("Soccer is not displayed");
                 softAssert.fail();
-
             }
         }
     }

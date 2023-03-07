@@ -4,7 +4,6 @@ import Main_Test.BaseClass;
 import Main_Test.Rerun_Failed_Test.Retry;
 import PageObjects.Login_Pages;
 import PageObjects.Spin_Win_Page;
-import cucumber.api.java.ht.E;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +15,7 @@ public class Spin_Win extends BaseClass {
     //incomplete
     @BeforeMethod()
     public void LoginSystem_Open_Spin_Win() throws InterruptedException {
+
         try {
             Login_Pages login = new Login_Pages();
             //Login System
@@ -42,7 +42,6 @@ public class Spin_Win extends BaseClass {
             Assert.fail();
         }
     }
-
 
     @Test(description = "Spin Bet", retryAnalyzer = Retry.class, dependsOnMethods = {"Verify_Spin_win_is_Displayed"})
     public void Spin_win_bet() throws InterruptedException {
@@ -81,7 +80,6 @@ public class Spin_Win extends BaseClass {
 
 
 
-
     @Test(description = "Statistics", dependsOnMethods = {"Verify_Spin_win_is_Displayed"})
     public void Verify_Statistics_is_Displayed() {
         test = extent.createTest("Verify Statistics  is Displayed").assignCategory("Functional Test").assignDevice("Windows");
@@ -89,7 +87,6 @@ public class Spin_Win extends BaseClass {
         Assert.assertTrue(spin_win.is_Statistics_displayed());
         test.info("Verify Statistics content is displayed");
     }
-
 
 
 
@@ -152,6 +149,8 @@ public class Spin_Win extends BaseClass {
         test.info("Verify odds is displayed");
         Assert.assertTrue(spin_win.is_light_dark_modes_works());
         test.info("Verify Game fon works");
+
+
         try {
             spin_win.Open_Help_section();
             if (driver.getPageSource().contains("SpinAndWin is a quick game. Action is 24 hours a day, 7 days a week. Betting round starts every few minutes. ")) {

@@ -12,6 +12,7 @@ public class High_Low extends BaseClass {
 
     @BeforeMethod
     public void LoginSystem_Open_Keno() throws InterruptedException {
+
         try {
             Login_Pages login = new Login_Pages();
             //Login System
@@ -25,8 +26,6 @@ public class High_Low extends BaseClass {
             System.out.println("Unable to Login");
         }
     }
-
-
 
     @Test(description = "Verify High Low Game is Displayed", retryAnalyzer = Retry.class)
     public void Verify_High_Low_is_Displayed() {

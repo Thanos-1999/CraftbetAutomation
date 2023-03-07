@@ -135,9 +135,9 @@ Registration_Page extends BasePage {
     public void Year_Registration() {
         Select RegYear = new Select(Reg_Year);
         try {
-            RegYear.selectByVisibleText("1999");
-        } catch (Exception e) {
-            System.out.println("Year Field is not working");
+              RegYear.selectByVisibleText("1999");
+            } catch (Exception e) {
+             System.out.println("Year Field is not working");
         }
     }
 

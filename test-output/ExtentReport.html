@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 22, 2023 04:59:04 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 7, 2023 01:24:16 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +69,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -80,7 +81,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>RegressionTest</a></li>
+					<li><a href='#'>FunctionalTest</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -121,10 +122,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>4</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -142,21 +143,21 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='97'>
 					<div class='test-heading'>
-						<span class='test-name'>Casino Search Work</span>
-						<span class='test-time'>Feb 22, 2023 04:59:19 PM</span>
+						<span class='test-name'>Verify Spin&Win Game is Displayed</span>
+						<span class='test-time'>Mar 7, 2023 01:24:32 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 22, 2023 04:59:19 PM</span>
-	<span class='label end-time'>Feb 22, 2023 04:59:31 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+482ms</span>
+	<span class='label start-time'>Mar 7, 2023 01:24:32 PM</span>
+	<span class='label end-time'>Mar 7, 2023 01:24:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+137ms</span>
 </div>
 <div class='test-attributes'>
 	<div class='category-list'>
-		<span class='category label'>RegressionTest</span>
+		<span class='category label'>FunctionalTest</span>
 	</div>
     <div class='device-list'>
         <span class='device label'>Windows</span>
@@ -172,35 +173,19 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='info'>
-				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>4:59:28 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>1:24:36 PM</td>
 				<td class='step-details'>
-						Type in Search input field: Gates of Olympus
-					
-				</td>
-			</tr>
-			<tr class='log' status='info'>
-				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>4:59:31 PM</td>
-				<td class='step-details'>
-						Capture Search Result
+						Spin&Win Game is Displayed
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>4:59:31 PM</td>
+				<td class='timestamp'>1:24:36 PM</td>
 				<td class='step-details'>
-						Expected Search Result: ---> Gates of Olympus || Actual Search result: ---> Gates of Olympus
-					
-				</td>
-			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>4:59:31 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text green'>CasinoSearch Main_Test.Main_Test.Test Case PASSED</span>
+						<span class='badge white-text green'>Verify_Spin_win_is_Displayed Main_Test.Main_Test.Test Case PASSED</span>
 					
 				</td>
 			</tr>
@@ -209,21 +194,21 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='98'>
 					<div class='test-heading'>
-						<span class='test-name'>Casino Search Work</span>
-						<span class='test-time'>Feb 22, 2023 04:59:45 PM</span>
+						<span class='test-name'>Verify Game header items are displayed</span>
+						<span class='test-time'>Mar 7, 2023 01:24:52 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 22, 2023 04:59:45 PM</span>
-	<span class='label end-time'>Feb 22, 2023 04:59:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+461ms</span>
+	<span class='label start-time'>Mar 7, 2023 01:24:52 PM</span>
+	<span class='label end-time'>Mar 7, 2023 01:25:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+270ms</span>
 </div>
 <div class='test-attributes'>
 	<div class='category-list'>
-		<span class='category label'>RegressionTest</span>
+		<span class='category label'>FunctionalTest</span>
 	</div>
     <div class='device-list'>
         <span class='device label'>Windows</span>
@@ -241,33 +226,57 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>4:59:53 PM</td>
+				<td class='timestamp'>1:24:55 PM</td>
 				<td class='step-details'>
-						Type in Search input field: Sweet Bonanza
+						Verify User ID is displayed
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>4:59:56 PM</td>
+				<td class='timestamp'>1:24:57 PM</td>
 				<td class='step-details'>
-						Capture Search Result
+						Verify Balance is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:24:57 PM</td>
+				<td class='step-details'>
+						Verify Jackpot is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:25:01 PM</td>
+				<td class='step-details'>
+						Verify odds is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:25:04 PM</td>
+				<td class='step-details'>
+						Verify Game fon works
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:25:10 PM</td>
+				<td class='step-details'>
+						Help section works
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>4:59:56 PM</td>
+				<td class='timestamp'>1:25:10 PM</td>
 				<td class='step-details'>
-						Expected Search Result: ---> Sweet Bonanza || Actual Search result: ---> Sweet Bonanza
-					
-				</td>
-			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>4:59:56 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text green'>CasinoSearch Main_Test.Main_Test.Test Case PASSED</span>
+						<span class='badge white-text green'>Verify_header_items_are_working Main_Test.Main_Test.Test Case PASSED</span>
 					
 				</td>
 			</tr>
@@ -276,21 +285,21 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='99'>
 					<div class='test-heading'>
-						<span class='test-name'>Casino Search Work</span>
-						<span class='test-time'>Feb 22, 2023 05:00:11 PM</span>
+						<span class='test-name'>Bet Buttons</span>
+						<span class='test-time'>Mar 7, 2023 01:25:26 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 22, 2023 05:00:11 PM</span>
-	<span class='label end-time'>Feb 22, 2023 05:00:22 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+451ms</span>
+	<span class='label start-time'>Mar 7, 2023 01:25:26 PM</span>
+	<span class='label end-time'>Mar 7, 2023 01:25:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+735ms</span>
 </div>
 <div class='test-attributes'>
 	<div class='category-list'>
-		<span class='category label'>RegressionTest</span>
+		<span class='category label'>FunctionalTest</span>
 	</div>
     <div class='device-list'>
         <span class='device label'>Windows</span>
@@ -308,33 +317,17 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>5:00:19 PM</td>
+				<td class='timestamp'>1:25:47 PM</td>
 				<td class='step-details'>
-						Type in Search input field: Fire Strike 2
-					
-				</td>
-			</tr>
-			<tr class='log' status='info'>
-				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>5:00:22 PM</td>
-				<td class='step-details'>
-						Capture Search Result
+						Verify Bet buttons are displayed
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:00:22 PM</td>
+				<td class='timestamp'>1:25:47 PM</td>
 				<td class='step-details'>
-						Expected Search Result: ---> Fire Strike 2 || Actual Search result: ---> Fire Strike 2
-					
-				</td>
-			</tr>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:00:22 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text green'>CasinoSearch Main_Test.Main_Test.Test Case PASSED</span>
+						<span class='badge white-text green'>Bet_buttons Main_Test.Main_Test.Test Case PASSED</span>
 					
 				</td>
 			</tr>
@@ -343,21 +336,21 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='100'>
 					<div class='test-heading'>
-						<span class='test-name'>Casino Search Work</span>
-						<span class='test-time'>Feb 22, 2023 05:00:36 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Spin&Win bet</span>
+						<span class='test-time'>Mar 7, 2023 01:26:04 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 22, 2023 05:00:36 PM</span>
-	<span class='label end-time'>Feb 22, 2023 05:00:48 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+494ms</span>
+	<span class='label start-time'>Mar 7, 2023 01:26:04 PM</span>
+	<span class='label end-time'>Mar 7, 2023 01:26:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+364ms</span>
 </div>
 <div class='test-attributes'>
 	<div class='category-list'>
-		<span class='category label'>RegressionTest</span>
+		<span class='category label'>FunctionalTest</span>
 	</div>
     <div class='device-list'>
         <span class='device label'>Windows</span>
@@ -375,33 +368,207 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>5:00:45 PM</td>
+				<td class='timestamp'>1:26:09 PM</td>
 				<td class='step-details'>
-						Type in Search input field: Goblin Heist Powernudge
+						Select random 5 numbers
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>5:00:48 PM</td>
+				<td class='timestamp'>1:26:09 PM</td>
 				<td class='step-details'>
-						Capture Search Result
+						Verify Bet Board is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:26:09 PM</td>
+				<td class='step-details'>
+						Verify VOISINS DU ZERO/ORPHELINS/TIERS are displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:26:15 PM</td>
+				<td class='step-details'>
+						Wait until pop up is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>1:26:15 PM</td>
+				<td class='step-details'>
+						Congratulations! Your bet is successfully placed text is not displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:26:16 PM</td>
+				<td class='step-details'>
+						Wait until Result time is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:26:21 PM</td>
+				<td class='step-details'>
+						Verify Wheel run is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:26:24 PM</td>
+				<td class='step-details'>
+						Verify our bet is displayed
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:00:48 PM</td>
+				<td class='timestamp'>1:26:24 PM</td>
 				<td class='step-details'>
-						Expected Search Result: ---> Goblin Heist Powernudge || Actual Search result: ---> Goblin Heist Powernudge
+						<span class='badge white-text green'>Spin_win_bet Main_Test.Main_Test.Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='101'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Statistics  is Displayed</span>
+						<span class='test-time'>Mar 7, 2023 01:26:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 7, 2023 01:26:40 PM</span>
+	<span class='label end-time'>Mar 7, 2023 01:27:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+300ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>FunctionalTest</span>
+	</div>
+    <div class='device-list'>
+        <span class='device label'>Windows</span>
+    </div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:27:18 PM</td>
+				<td class='step-details'>
+						Verify Statistics content is displayed
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>5:00:48 PM</td>
+				<td class='timestamp'>1:27:18 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text green'>CasinoSearch Main_Test.Main_Test.Test Case PASSED</span>
+						<span class='badge white-text green'>Verify_Statistics_is_Displayed Main_Test.Main_Test.Test Case PASSED</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='102'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Balance  change after bet</span>
+						<span class='test-time'>Mar 7, 2023 01:27:34 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 7, 2023 01:27:34 PM</span>
+	<span class='label end-time'>Mar 7, 2023 01:29:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 46s+388ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>FunctionalTest</span>
+	</div>
+    <div class='device-list'>
+        <span class='device label'>Windows</span>
+    </div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:27:36 PM</td>
+				<td class='step-details'>
+						Capture Account balance before bet
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:27:39 PM</td>
+				<td class='step-details'>
+						Select random 5 numbers
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>1:27:39 PM</td>
+				<td class='step-details'>
+						Verify Bet Board is displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>1:29:19 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>Verify_balance_is_change_after_bet - Main_Test.Main_Test.Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>1:29:19 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (8feb838f917c4d50a96446dda60f37d0)] -> css selector: .wheelRun] (tried for 70 second(s) with 500 milliseconds interval) - Main_Test.Main_Test.Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>1:29:20 PM</td>
+				<td class='step-details'>
+						Main_Test.Main_Test.Test Case Failed Screenshot is below com.aventstack.extentreports.ExtentTest@298231bc
 					
 				</td>
 			</tr>
@@ -450,15 +617,16 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>RegressionTest</span>
+						<span class='category-name'>FunctionalTest</span>
 						<span class='category-status right'>
 						<span class='label pass'>4</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
 							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
-							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -472,24 +640,34 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 22, 2023 04:59:19 PM</td>
-										<td class='linked' test-id='1'>Casino Search Work</td>
+										<td>Mar 7, 2023 01:24:32 PM</td>
+										<td class='linked' test-id='97'>Verify Spin&Win Game is Displayed</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 22, 2023 04:59:45 PM</td>
-										<td class='linked' test-id='2'>Casino Search Work</td>
+										<td>Mar 7, 2023 01:24:52 PM</td>
+										<td class='linked' test-id='98'>Verify Game header items are displayed</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 22, 2023 05:00:11 PM</td>
-										<td class='linked' test-id='3'>Casino Search Work</td>
+										<td>Mar 7, 2023 01:25:26 PM</td>
+										<td class='linked' test-id='99'>Bet Buttons</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 22, 2023 05:00:36 PM</td>
-										<td class='linked' test-id='4'>Casino Search Work</td>
+										<td>Mar 7, 2023 01:26:04 PM</td>
+										<td class='linked' test-id='100'>Spin&Win bet</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 7, 2023 01:26:40 PM</td>
+										<td class='linked' test-id='101'>Verify Statistics  is Displayed</td>
 										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 7, 2023 01:27:34 PM</td>
+										<td class='linked' test-id='102'>Verify Balance  change after bet</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -513,7 +691,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -525,19 +703,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 22, 2023 04:59:04 PM</div>
+					<div class='panel-lead'>Mar 7, 2023 01:24:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 22, 2023 05:00:49 PM</div>
+			 		<div class='panel-lead'>Mar 7, 2023 01:29:20 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 44s+233ms</div>
+					<div class='panel-lead'>0h 5m 4s+127ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -573,12 +751,12 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>RegressionTest</td>
+							<td>FunctionalTest</td>
 							<td>4</td>
-							<td>0</td>
+							<td>2</td>
 							<td>0</td>
 							<td>
-									100%
+									66.667%
 							</td>
 						</tr>
 					</table>
@@ -592,14 +770,14 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 4,
+                parentCount: 6,
 				passParent: 4,
-				failParent: 0,
+				failParent: 2,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 2,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -624,7 +802,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Casino Search Work":11.482,"Casino Search Work":11.461,"Casino Search Work":11.451,"Casino Search Work":11.494
+			        "Verify Spin&Win Game is Displayed":4.137,"Verify Game header items are displayed":18.27,"Bet Buttons":21.735,"Spin&Win bet":20.364,"Verify Statistics  is Displayed":37.3,"Verify Balance  change after bet":106.388
 			};
 		</script>
 	

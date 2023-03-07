@@ -14,9 +14,11 @@ public class BookBet_page extends BasePage {
     @CacheLookup
     private List<WebElement> Cofficients;
 
+
     @FindBy(xpath = "//ul[@class='provider-list default_scroll']//li")
     @CacheLookup
     private WebElement Provider_Searched_Name_Click;
+
 
     @FindBy(xpath = "//div[@class='search-providers']//input")
     @CacheLookup
@@ -46,10 +48,8 @@ public class BookBet_page extends BasePage {
     public BookBet_page() {
         PageFactory.initElements(BasePage.driver, this);
     }
-
     BasePage basePage = new BasePage(driver);
     int waitTime = 3000;
-
 
     public void Make_random_bet() throws InterruptedException {
         try {
@@ -77,13 +77,14 @@ public class BookBet_page extends BasePage {
     }
 
 
+
     public boolean is_booking_code_displayed() {
         return booking_code.isDisplayed();
     }
 
+
     public boolean is_date_displayed() {
         return date.isDisplayed();
     }
-
 
 }

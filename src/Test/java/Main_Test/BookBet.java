@@ -19,7 +19,7 @@ public class BookBet extends BaseClass {
             login.Sport();
             //Open Sport Page
         } catch (Exception err) {
-            test.info("Unable to Login");
+            System.out.println("Unable to Login");
             Assert.fail();
         }
     }
@@ -63,7 +63,6 @@ public class BookBet extends BaseClass {
             Assert.fail();
         }
 
-
         if (driver.getPageSource().contains("For your bet to be valid, take your booking code to any Betting shop to place your bet. Note that odds might change.")) {
              test.pass("Book Bet info text is displayed");
              Assert.assertTrue(true);
@@ -71,7 +70,6 @@ public class BookBet extends BaseClass {
              test.fail("Book Bet info text is not displayed");
              Assert.fail();
         }
-
         Assert.assertTrue(bookbet.is_booking_code_displayed());
         Assert.assertTrue(bookbet.is_date_displayed());
         test.info("Verify BookBet Content is displayed");

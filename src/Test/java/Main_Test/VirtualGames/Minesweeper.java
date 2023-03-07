@@ -4,7 +4,6 @@ import Main_Test.BaseClass;
 import Main_Test.Rerun_Failed_Test.Retry;
 import PageObjects.Login_Pages;
 import PageObjects.Minesweeper_page;
-import jdk.jfr.Threshold;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -103,6 +102,7 @@ public class Minesweeper extends BaseClass {
         test.info("Verify history is present");
         softAssert.assertAll();
     }
+
 
 
 

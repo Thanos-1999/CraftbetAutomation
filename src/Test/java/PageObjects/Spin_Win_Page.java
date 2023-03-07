@@ -148,6 +148,7 @@ public class Spin_Win_Page extends BasePage {
     }
 
     public boolean Verify_Wheelrun_is_displayed() {
+        basePage.waitAction(3000);
         Spin_Win_wait.until(ExpectedConditions.visibilityOf(wheelRun));
         basePage.waitAction(3000);
         return wheelRun.isDisplayed();

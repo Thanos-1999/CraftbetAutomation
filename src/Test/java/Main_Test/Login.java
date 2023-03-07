@@ -1,15 +1,10 @@
 package Main_Test;
 
 import PageObjects.Login_Pages;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Login extends BaseClass {
@@ -52,13 +47,15 @@ public class Login extends BaseClass {
 
     @Test(priority = 1, dataProvider = "invalid_login_credentials", description = "invalid login password")
     public void verify_Invalid_Login_Credentials(String testUsername, String testPassword) {
-        test = extent.createTest("verifyInvalidLoginCredentials").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("verifyInvalidLoginCredentials").assignCategory("Functional Test").assignDevice("Windows");
         Login_Pages login = new Login_Pages();
         login.Choose_ENG_Click_SignIn();
         login.typeUsername(testUsername);
         test.info(testUsername + " --->  Entering invalid username");
         login.typePassword(testPassword);
         test.info(testPassword + " --->  Entering invalid password");
+
+
         try {
             login.clickSignIn();
             test.info("Click Sign in button");
@@ -69,13 +66,13 @@ public class Login extends BaseClass {
             Assert.assertTrue(true);
         }
 
+
         try {
             String error_message = login.invalid_Login_Password_error_message();
             Assert.assertEquals(error_message, "Username or Password is incorrect. Please try again.");
             test.pass(error_message + " ---> " + " message is Displayed");
             Assert.assertTrue(true);
-
-        } catch (Exception e) {
+            } catch (Exception e) {
             test.fail(" Username or Password is incorrect ---> message is not Displayed");
             Assert.fail();
         }
@@ -92,7 +89,7 @@ public class Login extends BaseClass {
 
     @Test(priority = 2, dataProvider = "valid_data", description = "Valid login password")
     public void Valid_Login_Credentials(String testUsername, String testPassword) {
-        test = extent.createTest("VerifyValidLoginCredentials").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("VerifyValidLoginCredentials").assignCategory("Functional Test").assignDevice("Windows");
         Login_Pages login = new Login_Pages();
         login.Choose_ENG_Click_SignIn();
         login.typeUsername(testUsername);
@@ -138,7 +135,7 @@ public class Login extends BaseClass {
 
     @Test(priority = 3, dataProvider = "Password_recovery_invalid_data", description = "Password recovery")
     public void invalid_credentials_Password_recovery_page(String testUsername) {
-        test = extent.createTest("Invalid data in Password recovery page").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("Invalid data in Password recovery page").assignCategory("Functional Test").assignDevice("Windows");
         Login_Pages login = new Login_Pages();
         login.Choose_ENG_Click_SignIn();
         login.Open_Recovery_Page();

@@ -14,6 +14,7 @@ public class VirtualSport extends BaseClass {
 
     @BeforeMethod
     public void LoginSystem() throws InterruptedException {
+
         try {
             Login_Pages login = new Login_Pages();
             //Login System
@@ -23,7 +24,7 @@ public class VirtualSport extends BaseClass {
             //Open Virtual Sport Page
             login.Virtual_Sport();
         } catch (Exception err) {
-            test.info("Unable to Login");
+            System.out.println("Unable to Login");
             Assert.fail();
         }
     }

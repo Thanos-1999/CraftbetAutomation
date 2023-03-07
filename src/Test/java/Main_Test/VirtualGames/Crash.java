@@ -14,6 +14,7 @@ import java.util.Objects;
 public class Crash extends BaseClass {
     @BeforeMethod
     public void LoginSystem_Open_Crash() {
+
         try {
             Login_Pages login = new Login_Pages();
             //Login System

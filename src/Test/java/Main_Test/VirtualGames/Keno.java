@@ -30,6 +30,7 @@ public class Keno extends BaseClass {
         }
     }
 
+
     @Test(description = "Verify Keno Game is Displayed", retryAnalyzer = Retry.class)
     public void Verify_Keno_Game_is_Displayed() {
         test = extent.createTest("Verify Keno Game is Displayed").assignCategory("Functional Test").assignDevice("Windows");
@@ -330,6 +331,7 @@ public class Keno extends BaseClass {
         test.info("Click Bet btn");
         Keno.Game_animation_is_visible();
         test.info("Wait Game start");
+
         String accountbalanceafterBet = Keno.Account_balance();
         test.info("Capture Account balance after Bet" + "--->" + " " + accountbalanceafterBet);
         if (Objects.equals(accountbalancebeforeBet, accountbalanceafterBet)) {
@@ -337,8 +339,7 @@ public class Keno extends BaseClass {
             Assert.fail();
 
         } else {
-            test.pass("Balance before Bet" + "--->" + accountbalancebeforeBet + "||" + "Balance after Bet" + "--->" + accountbalanceafterBet + "--->" + " -1");
-            Assert.assertTrue(true);
+            test.pass("Balance before Bet" + "--->" + accountbalancebeforeBet + "||" + "Balance after Bet" + "--->" + accountbalanceafterBet + "--->" + " -1");Assert.assertTrue(true);
         }
     }
 
@@ -355,9 +356,7 @@ public class Keno extends BaseClass {
         test.info("Click Bet btn");
         Keno.Keno_Game();
         test.info("Wait Game to Start");
-
         test.fatal("WIN/LOS POP UP IS ABSENT");
-
     }
 }
 

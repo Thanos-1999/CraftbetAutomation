@@ -74,6 +74,7 @@ public class Casino_Logic extends BasePage {
         }
     }
 
+
     // Open All Provider Games
     public void OpenAllGames() throws InterruptedException {
 
@@ -84,8 +85,9 @@ public class Casino_Logic extends BasePage {
                 while (See_More_btn.isDisplayed()) {
                     basePage.javaScriptClick(See_More_btn);
                 }
-            }
-        } catch (Exception e) {
+              }
+           } catch (Exception e) {
+
         }
     }
 

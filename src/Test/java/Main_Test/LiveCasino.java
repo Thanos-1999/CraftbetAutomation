@@ -11,17 +11,18 @@ import java.io.IOException;
 
 public class LiveCasino extends BaseClass {
 
-    String PragmaticPlay_URL = "https://craftbet.com/products/5/54230/real";
-    String Evolution_URL = "https://craftbet.com/products/5/21000/real";
-    String Ezugi_URL = "https://craftbet.com/products/5/5001/real";
+    String PragmaticPlay_URL = "https://craftbet.com/products/5/54230/real?scroll=no";
+    String Evolution_URL = "https://craftbet.com/products/5/21000/real?scroll=no";
+    String Ezugi_URL = "https://craftbet.com/products/5/5001/real?scroll=no";
     String TVBet_URL = "https://craftbet.com/products/5/22001/real?scroll=yes";
-    String SaGaming_URL = "https://craftbet.com/products/5/66470/real";
-    String VivoGaming_URL = "https://craftbet.com/products/5/75697/real";
-    String VisionaryiGaming_URL = "https://craftbet.com/products/5/74000/real";
-    String BETCONSTRUCT_URL = "https://craftbet.com/products/5/68606/real";
+    String SaGaming_URL = "https://craftbet.com/products/5/66470/real?scroll=no";
+    String VivoGaming_URL = "https://craftbet.com/products/5/75697/real?scroll=no";
+    String VisionaryiGaming_URL = "https://craftbet.com/products/5/74000/real?scroll=no";
+    String BETCONSTRUCT_URL = "https://craftbet.com/products/5/68606/real?scroll=no";
 
     @BeforeMethod
     public void LoginSystem_hover_open_Live_Casino_Provider() throws InterruptedException {
+
         try {
             Login_Pages login = new Login_Pages();
             //Login System
@@ -32,7 +33,7 @@ public class LiveCasino extends BaseClass {
             login.Hover_Live_Casino();
             //Hover on Live Casino
         } catch (Exception err) {
-            test.info("Unable to Login");
+            System.out.println("Unable to Login");
             Assert.fail();
         }
     }
@@ -99,6 +100,7 @@ public class LiveCasino extends BaseClass {
             test.fail("Ezugi games not displayed");
             Assert.fail();
         }
+
         String URL = driver.getCurrentUrl();
         test.info("Get CurrentUrl");
         Assert.assertEquals(URL, Ezugi_URL);
@@ -130,10 +132,6 @@ public class LiveCasino extends BaseClass {
         test.info("Compare CurrentUrl to TVBet Url");
 
     }
-
-
-
-
 
 
 

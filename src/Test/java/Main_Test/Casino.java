@@ -4,11 +4,9 @@ import Main_Test.Rerun_Failed_Test.Retry;
 import PageObjects.Casino_Logic;
 import PageObjects.Casino_Page;
 import PageObjects.Login_Pages;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.sikuli.script.FindFailed;
-import org.sikuli.script.Screen;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +14,6 @@ import org.testng.annotations.Test;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-
 
 public class Casino extends BaseClass {
 
@@ -32,7 +29,7 @@ public class Casino extends BaseClass {
             //Open Casino Page
             login.Casino();
         } catch (Exception err) {
-            test.info("Unable to Login");
+            System.out.println("Unable to Login");
             Assert.fail();
         }
     }
@@ -48,14 +45,14 @@ public class Casino extends BaseClass {
         for (int i = 0; i < listOfFiles.length; i++) {
             if (listOfFiles[i].isFile()) {
                 test.info("File " + listOfFiles[i].getName());
-            } else if (listOfFiles[i].isDirectory()) {
+              } else if (listOfFiles[i].isDirectory()) {
                 test.info("Directory " + listOfFiles[i].getName());
             }
         }
     }
 
     @Test(description = "Top Games", retryAnalyzer = Retry.class)
-    public void Casino_Favorite_Games() throws InterruptedException, IOException, AWTException {
+    public void Casino_Favorite_Games() throws InterruptedException, AWTException {
         test = extent.createTest("Casino Top Games").assignCategory("Regression Test").assignDevice("Windows");
         Casino_Page casino_craftBet = new Casino_Page();
         casino_craftBet.Search_Work("Wild West Gold");
@@ -89,7 +86,7 @@ public class Casino extends BaseClass {
 
 
     @Test(priority = 0, description = "Check Casino Search Regression", retryAnalyzer = Retry.class, dataProvider = "Casino_Searched_Games_List")
-    public void CasinoSearch(String GameName) throws InterruptedException, IOException, AWTException {
+    public void CasinoSearch(String GameName) throws InterruptedException, AWTException {
         test = extent.createTest("Casino Search Work").assignCategory("Regression Test").assignDevice("Windows");
         Casino_Page casino_craftBet = new Casino_Page();
         casino_craftBet.Search_Work(GameName);
@@ -112,46 +109,49 @@ public class Casino extends BaseClass {
     }
 
 
-    @Test(description = " Specific Casino Game Bet", retryAnalyzer = Retry.class, enabled = true)
-    public void Specific_Game_Bet() throws IOException, InterruptedException, AWTException, FindFailed {
+    @Test(description = " Specific Casino Game Bet")
+    public void Specific_Game_Bet() throws IOException, InterruptedException, AWTException {
         test = extent.createTest("Specific Casino Game Bet").assignDevice("Windows");
         Casino_Page casino_craftBet = new Casino_Page();
-        casino_craftBet.Search_Work("Dragon Egg");
-        test.info("Open Casino and Search mentioned game: Dragon Egg");
+        casino_craftBet.Search_Work("Bomb Bonanza");
+        test.info("Open Casino and Search mentioned game: Bomb Bonanza");
         casino_craftBet.Hover_Casino_Game_click_Play();
         test.info("Open Game");
+        Actions action = new Actions(driver);
 
         try {
-            Actions action = new Actions(driver);
             action.sendKeys(Keys.ENTER).build().perform();
             Thread.sleep(4000);
-           } catch (Exception e) {
+            } catch (Exception e) {
         }
 
-        Screen s = new Screen();
-        try {
-            for (int z = 0; z < 1000; z++) {
-                s.find("pause.png"); //identify pause button
-                s.click("pause.png"); //click pause button
-                Thread.sleep(60000);
-                test.info("Bet button clicked " + z);
-            }
-
-        } catch (Exception e) {
-            System.out.println("Unable to click Bet button");
-        }
-
-
+//        Screen screen = new Screen() ;
+//
 //        try {
 //            for (int z = 0; z < 1000; z++) {
-//                action.sendKeys(Keys.SPACE).build().perform();
-//                Thread.sleep(60000);
-//                test.info("Bet button clicked "+ z);
+//                screen.find("D:\\Downloads\\bet.png"); //identify pause button
+//                screen.click("D:\\Downloads\\bet.png"); //click pause button
+//                Thread.sleep(1000);
+//                test.info("Bet button clicked " + z);
 //            }
+//
 //        } catch (Exception e) {
 //            System.out.println("Unable to click Bet button");
 //        }
+
+
+        try   {
+            for (int z = 0; z < 1000; z++) {
+                action.sendKeys(Keys.SPACE).build().perform();
+                Thread.sleep(60000);
+                test.info("Bet button clicked "+ z);
+                }
+        }  catch (Exception e) {
+            System.out.println("Unable to click Bet button");
+        }
     }
+
+
 
     @Test(description = "Betsoft", retryAnalyzer = Retry.class)
     public void Betsoft() throws IOException, InterruptedException, AWTException {
@@ -187,7 +187,7 @@ public class Casino extends BaseClass {
 
 
     @Test(description = "Edict", retryAnalyzer = Retry.class)
-    public void Edict() throws IOException, InterruptedException, AWTException {
+    public void Edict() throws IOException, InterruptedException, AWTException, AWTException {
         test = extent.createTest("Edict Provider Games Check").assignCategory("Regression Test").assignDevice("Windows");
         Casino_Logic casino_logic = new Casino_Logic();
         casino_logic.Search_and_Open_Casino_Provider("Edict");
@@ -206,6 +206,7 @@ public class Casino extends BaseClass {
         test.info(casino_logic.GamesCount_BrokenImages());
         test.info("Provider Games Screenshots/Broken Images checked");
     }
+
 
 
     @Test(description = "Evolution", retryAnalyzer = Retry.class)
@@ -560,6 +561,7 @@ public class Casino extends BaseClass {
     }
 
 
+
     @Test(description = "Wazdan", retryAnalyzer = Retry.class)
     public void Wazdan() throws IOException, InterruptedException, AWTException {
         test = extent.createTest("Wazdan Provider Games Check").assignCategory("Regression Test").assignDevice("Windows");
@@ -569,6 +571,8 @@ public class Casino extends BaseClass {
         test.info(casino_logic.GamesCount_BrokenImages());
         test.info("Provider Games Screenshots/Broken Images checked");
     }
+
+
 
 
     @Test(description = "WorldMatch", retryAnalyzer = Retry.class)

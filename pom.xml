@@ -23,11 +23,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.kie.workbench.screens</groupId>
-            <artifactId>kie-wb-common-default-editor-api</artifactId>
-            <version>7.73.0.Final</version>
-        </dependency>
 
         <dependency>
             <groupId>org.assertj</groupId>
@@ -72,6 +67,7 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
@@ -83,26 +79,31 @@
             <artifactId>extentreports</artifactId>
             <version>4.1.7</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>2.14.0</version>
         </dependency>
+
         <dependency>
             <groupId>ru.sbtqa.tag</groupId>
             <artifactId>qa-utils</artifactId>
             <version>1.7.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>5.2.3</version>
         </dependency>
+
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.3.1</version>
         </dependency>
+
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
@@ -174,33 +175,13 @@
             <artifactId>caseclass-evolution_2.13</artifactId>
             <version>0.0.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.kie.workbench.screens</groupId>
-            <artifactId>kie-wb-common-screens</artifactId>
-            <version>7.73.0.Final</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.sikuli</groupId>
-            <artifactId>sikuli-core</artifactId>
-            <version>1.2.2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-api -->
-        <dependency>
-            <groupId>org.sikuli</groupId>
-            <artifactId>sikuli-api</artifactId>
-            <version>1.2.0</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
-        <dependency>
-            <groupId>com.sikulix</groupId>
-            <artifactId>sikulixapi</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<!--        <dependency>-->
+<!--            <groupId>com.sikulix</groupId>-->
+<!--            <artifactId>sikulixapi</artifactId>-->
+<!--            <version>1.1.2</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 

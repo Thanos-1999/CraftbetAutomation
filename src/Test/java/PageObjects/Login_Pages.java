@@ -307,14 +307,18 @@ public class Login_Pages extends BasePage {
         basePage.clickOnElementIfClickable(signin);
     }
 
+
     public String invalid_Login_Password_error_message() {
         return basePage.getText(Invalid_Error_Message);
     }
+
+
 
     public boolean Verify_UserID_is_Displayed() {
         basePage.waitElementToBeVisible(User_id);
         return User_id.isDisplayed();
     }
+
 
     public void Open_Recovery_Page() {
         basePage.javaScriptClick(Password_recovery);

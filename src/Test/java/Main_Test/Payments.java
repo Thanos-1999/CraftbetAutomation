@@ -18,14 +18,14 @@ public class Payments extends BaseClass {
             //Select Eng Language
             login.Choose_Eng_Language();
         } catch (Exception err) {
-            test.info("Unable to Login");
+            System.out.println("Unable to Login");
             Assert.fail();
         }
     }
 
 
     @Test()
-    public void Verify_Deposit_section_isDisplayed() throws InterruptedException {
+    public void Verify_Deposit_section_is_Displayed() throws InterruptedException {
         test = extent.createTest("Deposit page availability").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
         Payments_Page payments = new Payments_Page();
         String actTitle = payments.Deposit_Page_aviability();
@@ -36,9 +36,8 @@ public class Payments extends BaseClass {
     }
 
 
-
     @Test()
-    public void Verify_Withdraw_section_isDisplayed() throws InterruptedException {
+    public void Verify_Withdraw_section_is_Displayed() throws InterruptedException {
         test = extent.createTest("Withdraw page availability").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
         Payments_Page payments = new Payments_Page();
         Assert.assertTrue(payments.is_Withdraw_section_displayed());
@@ -46,13 +45,12 @@ public class Payments extends BaseClass {
     }
 
 
-
     @Test()
     public void PaymentSystems() throws InterruptedException {
         test = extent.createTest("Payment Systems").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
         Payments_Page payments = new Payments_Page();
         payments.Payment_Systems();
-        String expectedTitle = "16";
+        String expectedTitle = "17";
         String actTitle = String.valueOf(payments.Payments.size());
         Assert.assertEquals(actTitle, expectedTitle);
         test.info("Payments size ---> " + actTitle);

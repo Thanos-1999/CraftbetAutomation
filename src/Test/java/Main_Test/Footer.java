@@ -1,7 +1,6 @@
 package Main_Test;
 
 import PageObjects.Footer_Page;
-import elemental2.dom.Screen;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,7 +15,7 @@ public class Footer extends BaseClass {
 
     String BUNDESLIGA_URL = "https://craftbet.com/sport/prematch#/prematch/competitions?sport=1&competitions=11270";
 
-    String SERIE_A_URL = "https://craftbet.com/sport/prematch#/prematch/competitions?sport=1&competitions=11270";
+    String SERIE_A_URL = "https://craftbet.com/sport/prematch#/prematch/competitions?sport=1&competitions=15577";
 
     String CHAMPIONS_LEAGUE_URL = "https://craftbet.com/sport/prematch#/prematch/competitions?sport=1&competitions=10055";
 
@@ -32,16 +31,20 @@ public class Footer extends BaseClass {
 
     String BET_ON_POKER = "https://craftbet.com/category/5/1005/real/1";
 
+    String Ezugi_URL = "https://craftbet.com/products/5/5001/demo";
+
+    String EVOLUTION_URL = "https://craftbet.com/products/5/21000/demo";
+
     String BINGO_47_URL = "https://craftbet.com/category/5/1003/real/1";
 
     String COLORS_URL = "https://craftbet.com/category/5/1002/real/1";
 
-    String MINESWEEPER_URL = "https://craftbet.com/category/5/1001/real/1";
+    String MINESWEEPER_URL = "https://craftbet.com/category/5/1010/real/1";
 
 
     @Test(description = "LEGAL")
     public void TERMS_CONDITIONS() throws InterruptedException {
-        test = extent.createTest("TERMS CONDITIONS").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("TERMS CONDITIONS").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.TERMS_CONDITIONS();
         test.info("Check TERMS CONDITIONS section functional");
@@ -57,7 +60,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "SELF EXCLUSION")
     public void SELF_EXCLUSION() throws InterruptedException {
-        test = extent.createTest("SELF EXCLUSION").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("SELF EXCLUSION").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.SELF_EXLUSION();
         test.info("Check SELF EXCLUSION section ");
@@ -73,7 +76,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "RESPONSIBLE GAMING")
     public void RESPONSIBLE_GAMING() {
-        test = extent.createTest("RESPONSIBLE GAMING").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("RESPONSIBLE GAMING").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.RESPONSIBLE_GAMING();
         test.info("Check RESPONSIBLE GAMING section functional");
@@ -88,7 +91,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "DISPUTE RESOLUTION")
     public void DISPUTE_RESOLUTION() {
-        test = extent.createTest("DISPUTE RESOLUTION").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("DISPUTE RESOLUTION").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.DISPUTE_RESOLUTION();
         test.info("Check RESPONSIBLE GAMING section wor");
@@ -99,7 +102,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "AML")
     public void AML() {
-        test = extent.createTest("AML").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("AML").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.AML();
         test.info("Check AML  section functional");
@@ -111,7 +114,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "FAIR GAMING AND RNG")
     public void FAIR_GAMING_AND_RNG() {
-        test = extent.createTest("FAIR GAMING AND RNG").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("FAIR GAMING AND RNG").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.FAIR_GAMING_AND_RNG();
         test.info("Check FAIR GAMING AND RNG section functional");
@@ -123,7 +126,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "PRIVACY POLICY")
     public void PRIVACY_POLICY() {
-        test = extent.createTest("PRIVACY POLICY").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("PRIVACY POLICY").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.PRIVACY_POLICY();
         test.info("Check PRIVACY POLICY section functional");
@@ -135,7 +138,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "ACCOUNT, PAYOUTS, BONUSES")
     public void ACCOUNT_PAYOUTS_BONUSES() {
-        test = extent.createTest("ACCOUNT, PAYOUTS, BONUSES").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("ACCOUNT, PAYOUTS, BONUSES").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.ACCOUNT_PAYOUTS_BONUSES();
         test.info("Check ACCOUNT, PAYOUTS, BONUSES section functional");
@@ -147,7 +150,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "KYC POLICIES, PRIVACY AND MANAGEMENT OF PERSONAL DATA")
     public void KYC_POLICIES_PRIVACY_AND_MANAGEMENT_OF_PERSONAL_DATA() {
-        test = extent.createTest("KYC POLICIES, PRIVACY AND MANAGEMENT OF PERSONAL DATA").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("KYC POLICIES, PRIVACY AND MANAGEMENT OF PERSONAL DATA").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.KYC_POLICIES_PRIVACY_AND_MANAGEMENT_OF_PERSONAL_DATA();
         test.info("Check KYC POLICIES, PRIVACY AND MANAGEMENT OF PERSONAL DATA section functional");
@@ -158,7 +161,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "SPORTSBOOK")
     public void PREMIER_LEAGUE() throws InterruptedException, AWTException {
-        test = extent.createTest("PREMIER LEAGUE").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("PREMIER LEAGUE").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.PREMIER_LEAGUE();
         Thread.sleep(2000);
@@ -168,7 +171,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "SPORTSBOOK")
     public void LIGUE_1() throws InterruptedException, AWTException {
-        test = extent.createTest("LIGUE 1").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("LIGUE 1").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.LIGUE_1();
         Thread.sleep(2000);
@@ -178,7 +181,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "SPORTSBOOK")
     public void BUNDESLIGA() throws InterruptedException {
-        test = extent.createTest("BUNDESLIGA").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("BUNDESLIGA").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.BUNDESLIGA();
         Thread.sleep(2000);
@@ -188,7 +191,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "SPORTSBOOK")
     public void SERIE_A() throws InterruptedException {
-        test = extent.createTest("SERIE A").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("SERIE A").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.SERIE_A();
         Thread.sleep(2000);
@@ -199,7 +202,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "SPORTSBOOK")
     public void CHAMPIONS_LEAGUE() throws InterruptedException {
-        test = extent.createTest("CHAMPIONS LEAGUE").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("CHAMPIONS LEAGUE").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.CHAMPIONS_LEAGUE();
         Thread.sleep(2000);
@@ -211,26 +214,26 @@ public class Footer extends BaseClass {
     @Test(description = "CASINO & LIVE CASINO")
     public void EVOLUTION() throws InterruptedException, IOException {
         LiveCasino liveCasino = new LiveCasino();
-        test = extent.createTest("EVOLUTION").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("EVOLUTION").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.EVOLUTION();
         String URL = driver.getCurrentUrl();
-        Assert.assertEquals(URL, liveCasino.Evolution_URL);
+        Assert.assertEquals(URL, EVOLUTION_URL);
     }
 
     @Test(description = "CASINO & LIVE CASINO")
     public void EZUGI() throws InterruptedException, IOException {
         LiveCasino liveCasino = new LiveCasino();
-        test = extent.createTest("EZUGI").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("EZUGI").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.EZUGI();
         String URL = driver.getCurrentUrl();
-        Assert.assertEquals(URL, liveCasino.Ezugi_URL);
+        Assert.assertEquals(URL, Ezugi_URL);
     }
 
     @Test(description = "VIRTUAL GAMES")
     public void BINGO_37() throws InterruptedException, IOException {
-        test = extent.createTest("BINGO 37").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("BINGO 37").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.BINGO_37();
         String URL = driver.getCurrentUrl();
@@ -239,7 +242,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void KENO() throws InterruptedException, IOException {
-        test = extent.createTest("KENO").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("KENO").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.KENO();
         Thread.sleep(2000);
@@ -249,7 +252,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void CRASH() throws InterruptedException, IOException {
-        test = extent.createTest("CRASH").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("CRASH").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.CRASH();
         Thread.sleep(2000);
@@ -259,7 +262,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void HIGH_LOW() throws InterruptedException, IOException {
-        test = extent.createTest("HIGH LOW").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("HIGH LOW").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.HIGH_LOW();
         Thread.sleep(2000);
@@ -269,7 +272,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void BET_ON_RACING() throws InterruptedException, IOException {
-        test = extent.createTest("BET ON RACING").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("BET ON RACING").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.BET_ON_RACING();
         String URL = driver.getCurrentUrl();
@@ -278,7 +281,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void BET_ON_POKER() throws InterruptedException, IOException {
-        test = extent.createTest("BET ON POKER").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("BET ON POKER").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.BET_ON_POKER();
         String URL = driver.getCurrentUrl();
@@ -287,7 +290,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void BINGO_47() throws InterruptedException, IOException {
-        test = extent.createTest("BINGO 47").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("BINGO 47").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.BINGO_47();
         String URL = driver.getCurrentUrl();
@@ -296,7 +299,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void COLORS() throws InterruptedException, IOException {
-        test = extent.createTest("COLORS").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("COLORS").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.COLORS();
         String URL = driver.getCurrentUrl();
@@ -305,7 +308,7 @@ public class Footer extends BaseClass {
 
     @Test(description = "VIRTUAL GAMES")
     public void MINESWEEPER() throws InterruptedException, IOException {
-        test = extent.createTest("MINESWEEPER").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("MINESWEEPER").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.MINESWEEPER();
         Thread.sleep(2000);
@@ -315,7 +318,7 @@ public class Footer extends BaseClass {
 
     @Test(enabled = false)
     public void Payment_icons() {
-        test = extent.createTest("Social Icons").assignCategory("Functional Main_Test.Test").assignDevice("Windows");
+        test = extent.createTest("Social Icons").assignCategory("Functional Test").assignDevice("Windows");
         Footer_Page footer = new Footer_Page();
         footer.Payment_icons();
 
